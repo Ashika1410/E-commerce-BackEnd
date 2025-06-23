@@ -12,7 +12,7 @@ const orderRoute = require('./Routes/orderRoute');
 // const paymentRoute = require('./Routes/paymentRoute');
 
 const app = express();
-
+app.use(express.static("dist"));
 app.use(bodyParser.json());
 app.use(cors());
 
@@ -24,7 +24,6 @@ app.use('/user', userRoute);
 app.use('/order', orderRoute);
 // app.use('/login', loginRoute);
 // app.use('/payment', paymentRoute);
-
 
 app.listen(7702, () => {
     console.log('Project is running on port 7702');
