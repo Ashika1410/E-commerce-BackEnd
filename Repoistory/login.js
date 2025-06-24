@@ -72,26 +72,26 @@ exports.addNewLogin = (userID, loginMethod) => {
     });
 };
 
-exports.updateLogin = () => {
-    return new Promise((resolve, reject) => {
-        const sqlQuery = ``;
-        console.log(sqlQuery);
+// exports.updateLogin = () => {
+//     return new Promise((resolve, reject) => {
+//         const sqlQuery = ``;
+//         console.log(sqlQuery);
 
-    })
-};
+//     })
+// };
 
-exports.updatePassword = () => {
-    return new Promise((resolve, reject) => {
-        const sqlQuery = ``;
-        console.log(sqlQuery);
+// exports.updatePassword = () => {
+//     return new Promise((resolve, reject) => {
+//         const sqlQuery = ``;
+//         console.log(sqlQuery);
 
-    })
-};
+//     })
+// };
 
-exports.removeAccount = () => {
-    return new Promise((resolve, reject) => {
-        const sqlQuery = ``;
-        console.log(sqlQuery);
+// exports.removeAccount = () => { 
+//     return new Promise((resolve, reject) => {
+//         const sqlQuery = ``;
+//         console.log(sqlQuery);
 
-    })
-};
+//     })
+// };
