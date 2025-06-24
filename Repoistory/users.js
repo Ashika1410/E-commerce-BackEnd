@@ -1,5 +1,5 @@
 const mysql_Pool = require('../Resources/db').mysql_Pool;
-const bcrypt = require('bcrypt');
+const bcryptjs = require("bcryptjs");
 
 exports.displayAllUsers = () => {
   return new Promise((resolve, reject) => {
@@ -128,7 +128,7 @@ exports.verifyLogin = (uname, phoneno, email, password) => {
           return resolve(null);
         }
         const user = result[0];
-        const isMatch = await bcrypt.compare(password, user.Password);
+        const isMatch = await bcryptjs.compare(password, user.Password);
         if (!isMatch) return resolve(null);
         return resolve({ result });
       });
