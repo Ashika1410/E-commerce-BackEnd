@@ -1,4 +1,4 @@
-const bcrypt = require('bcrypt');
+const bcryptjs = require('bcryptjs')
 const userRepo = require('../Repoistory/users');
 
 exports.getAllUser = async (req, res) => {
@@ -55,7 +55,7 @@ exports.postUser = async (req, res) => {
             });
         }
         const saltRounds = 10;
-        const hashedPassword = await bcrypt.hash(password, saltRounds);
+        const hashedPassword = await bcryptjs.hash(password, saltRounds);
 
         const result = await userRepo.createUser(uname, fname, lname, email, hashedPassword, phoneno, address);
 
@@ -119,8 +119,8 @@ exports.putUserPassword = async (req, res) => {
     try {
         const { newpassword } = req.body;
         const saltRounds = 10;
-        const salt = await bcrypt.genSalt(saltRounds);
-        const hashedPassword = await bcrypt.hash(newpassword, salt);
+        const salt = await bcryptjs.genSalt(saltRounds);
+        const hashedPassword = await bcryptjs.hash(newpassword, salt);
         if (newpassword) {
             const result = await userRepo.updateUser(hashedPassword);
             return res.status(201).json({
