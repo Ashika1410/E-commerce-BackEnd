@@ -4,9 +4,6 @@
         {
             "src": "app.js",
             "use": "@vercel/node"
-        },
-        {
-            "$schema": "https://openapi.vercel.sh/vercel.json"
         }
     ],
     "routes": [
