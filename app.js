@@ -23,10 +23,10 @@ app.use('/api/wishlist', wishlistRoute);
 app.use('/api/user', userRoute);
 app.use('/api/order', orderRoute);
 
-// const PORT = 7702;
-// app.listen(PORT, () => {
-//   console.log(`Server is running on port ${PORT}`);
-// });
+const PORT = 7702;
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
 
 module.exports = app;
 
